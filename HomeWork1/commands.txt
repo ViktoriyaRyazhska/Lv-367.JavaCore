@@ -1,0 +1,388 @@
+Microsoft Windows [Version 10.0.15063]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\abudztc>mkdir 1
+
+C:\Users\abudztc>cd 1
+
+C:\Users\abudztc\1>cd ..
+
+C:\Users\abudztc>mkdir git
+
+C:\Users\abudztc>cd git
+
+C:\Users\abudztc\git>git clone https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore.git
+Cloning into 'Lv-367.JavaCore'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 1), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+
+C:\Users\abudztc\git>add 1 row
+'add' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\abudztc\git>git add .
+fatal: Not a git repository (or any of the parent directories): .git
+
+C:\Users\abudztc\git>git add
+fatal: Not a git repository (or any of the parent directories): .git
+
+C:\Users\abudztc\git>git add .
+fatal: Not a git repository (or any of the parent directories): .git
+
+C:\Users\abudztc\git>cd Lv-367.JavaCore
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git add .
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git commit
+Aborting commit due to empty commit message.
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Zapovit.txt
+
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git commit -m"first line"
+[master 55a4060] first line
+ Committer: Andrii Budzyn <abudztc@training.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git push origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': andreybuuu@gmail.com
+Password for 'https://andreybuuu@gmail.com@github.com':
+remote: You must verify your email address.
+remote: See https://github.com/settings/emails.
+fatal: unable to access 'https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore.git/': The requested URL returned error: 403
+
+C:\Users\abudztc\git\Lv-367.JavaCore>cd ..
+
+C:\Users\abudztc\git>
+C:\Users\abudztc\git>git commit
+fatal: Not a git repository (or any of the parent directories): .git
+
+C:\Users\abudztc\git>cd Lv-367.JavaCore
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git commit
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git push origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com': andreybuuu@gmail.com
+Password for 'https://andreybuuu@gmail.com@github.com':
+To https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git pull
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 9 (delta 3), reused 8 (delta 2), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore
+   165c652..3fde1af  master     -> origin/master
+Auto-merging Zapovit.txt
+CONFLICT (content): Merge conflict in Zapovit.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git commit -a -m"the first line"
+[master 854880e] the first line
+ Committer: Andrii Budzyn <abudztc@training.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git pull
+Already up to date.
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git push origin master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 573 bytes | 81.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore.git
+   3fde1af..854880e  master -> master
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git checkout -b andriib
+Switched to a new branch 'andriib'
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 2 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore
+ * [new branch]      tKasperovich -> origin/tKasperovich
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> andriib
+
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git commit
+On branch andriib
+Changes not staged for commit:
+        modified:   Zapovit.txt
+
+no changes added to commit
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git commit -a -m"the 8th line"
+[andriib d1b12e0] the 8th line
+ Committer: Andrii Budzyn <abudztc@training.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> andriib
+
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git push origin andriib
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 317 bytes | 105.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'andriib' on GitHub by visiting:
+remote:      https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore/pull/new/andriib
+remote:
+To https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore.git
+ * [new branch]      andriib -> andriib
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git merge andriib
+Updating 854880e..d1b12e0
+Fast-forward
+ Zapovit.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git pull
+Already up to date.
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git commit -a -m"the 8th line"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git push origin master
+To https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git pull
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 12 (delta 4), reused 12 (delta 4), pack-reused 0
+Unpacking objects: 100% (12/12), done.
+From https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore
+   854880e..6b5fddc  master     -> origin/master
+Auto-merging Zapovit.txt
+CONFLICT (content): Merge conflict in Zapovit.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git commit -a -m"the 8th line"
+[master 3ba4aeb] the 8th line
+ Committer: Andrii Budzyn <abudztc@training.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 370 bytes | 185.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore.git
+   6b5fddc..3ba4aeb  master -> master
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git checkout andriib
+Switched to branch 'andriib'
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git pull
+remote: Enumerating objects: 31, done.
+remote: Counting objects: 100% (31/31), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 21 (delta 8), reused 19 (delta 6), pack-reused 0
+Unpacking objects: 100% (21/21), done.
+From https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore
+ * [new branch]      dromov       -> origin/dromov
+   3ba4aeb..1d6ce2f  master       -> origin/master
+   3a307bc..19723aa  tKasperovich -> origin/tKasperovich
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> andriib
+
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git status
+On branch andriib
+nothing to commit, working tree clean
+
+C:\Users\abudztc\git\Lv-367.JavaCore>mkdir HomeWork1
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git status
+On branch andriib
+nothing to commit, working tree clean
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git statuds
+git: 'statuds' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git status
+On branch andriib
+nothing to commit, working tree clean
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git merge master
+Updating d1b12e0..3ba4aeb
+Fast-forward
+ Zapovit.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git pull
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 12 (delta 6), reused 10 (delta 4), pack-reused 0
+Unpacking objects: 100% (12/12), done.
+From https://github.com/ViktoriyaRyazhska/Lv-367.JavaCore
+   1d6ce2f..b9fb63d  master     -> origin/master
+ * [new branch]      maslyanyy  -> origin/maslyanyy
+Updating 3ba4aeb..b9fb63d
+Fast-forward
+ Zapovit.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git checkout andriib
+Switched to branch 'andriib'
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git merge master
+Updating 3ba4aeb..b9fb63d
+Fast-forward
+ Zapovit.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+C:\Users\abudztc\git\Lv-367.JavaCore>git branch
+* andriib
+  master
+
+C:\Users\abudztc\git\Lv-367.JavaCore>
