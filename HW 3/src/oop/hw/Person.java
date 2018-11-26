@@ -1,9 +1,5 @@
 package oop.hw;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class Person {
 	private String name;
 	private int birthYear;
@@ -37,7 +33,7 @@ public class Person {
 		return 2018 - birthYear;
 	}	
 	
-	public void inputPersonsInformation(String name, int birthYear) throws IOException {
+	public void inputPersonsInformation(String name, int birthYear) {
 
 		this.name = name;
 		this.birthYear = birthYear;
