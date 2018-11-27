@@ -23,68 +23,68 @@ public class ExserciseL4 {
     public static void main(String[] args) {
         System.out.println("Test");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        System.out.println("Type 3 float number");
-//        float floats[] = new float[3];
-//        for (int i = 0; i < floats.length; i++) {
-//            System.out.print("Enter " + i + " number :");
-//            try {
-//                floats[i] = Float.parseFloat(br.readLine());
-//            } catch (IOException ex) {
-//                System.out.println("Error");
-//                i--;
-//            }
-//        }
-//        if ((floats[0] < 5 && floats[0] > -5) && (floats[1] < 5 && floats[1] > -5) && (floats[2] < 5 && floats[2] > -5)) {
-//            System.out.println(" All nums in range [-5 , 5]");
-//        } else {
-//            System.out.println(" Nums not in range [-5 , 5]");
-//        }
-//        System.out.println("____________________________________________________");
-//        System.out.println("Type 3 int number");
-//        int ints[] = new int[3];
-//        for (int i = 0; i < ints.length; i++) {
-//            System.out.print("Enter " + i + " number :");
-//            try {
-//                ints[i] = Integer.parseInt(br.readLine());
-//            } catch (IOException ex) {
-//                System.out.println("Error");
-//                i--;
-//            }
-//        }
-//        int min = ints[0];
-//        int max = ints[0];
-//        for (int i = 0; i < ints.length; i++) {
-//            if (min > ints[i]) {
-//                min = ints[i];
-//            }
-//            if (max < ints[i]) {
-//                max = ints[i];
-//            }
-//            
-//        }
-//        System.out.println("Min value = " + min + "\r\nMax value = " + max);
-//        System.out.println("____________________________________________________");
-//        System.out.print("Enter Http Error ");
-//        int error = 0;
-//        boolean state = false;
-//        while (true) {
-//            try {
-//                error = Integer.parseInt(br.readLine());
-//
-//                for (HTTPError s : HTTPError.values()) {
-//                    if (error == s.getDescription()) {
-//                        System.out.println(s + ": " + s.getDescription());
-//                        state = true;
-//                    }
-//                }
-//                if(state == false){
-//                    System.out.println("Dont find error!");
-//                }
-//                break;
-//            } catch (IOException e) {
-//                System.out.println("Wrong");
-//            }
-//        }
+        System.out.println("Type 3 float number");
+        float floats[] = new float[3];
+        for (int i = 0; i < floats.length; i++) {
+            System.out.print("Enter " + i + " number :");
+            try {
+                floats[i] = Float.parseFloat(br.readLine());
+            } catch (IOException ex) {
+                System.out.println("Error");
+                i--;
+            }
+        }
+        if ((floats[0] < 5 && floats[0] > -5) && (floats[1] < 5 && floats[1] > -5) && (floats[2] < 5 && floats[2] > -5)) {
+            System.out.println(" All nums in range [-5 , 5]");
+        } else {
+            System.out.println(" Nums not in range [-5 , 5]");
+        }
+        System.out.println("____________________________________________________");
+        System.out.println("Type 3 int number");
+        int ints[] = new int[3];
+        for (int i = 0; i < ints.length; i++) {
+            System.out.print("Enter " + i + " number :");
+            try {
+                ints[i] = Integer.parseInt(br.readLine());
+            } catch (IOException ex) {
+                System.out.println("Error");
+                i--;
+            }
+        }
+        int min = ints[0];
+        int max = ints[0];
+        for (int i = 0; i < ints.length; i++) {
+            if (min > ints[i]) {
+                min = ints[i];
+            }
+            if (max < ints[i]) {
+                max = ints[i];
+            }
+            
+        }
+        System.out.println("Min value = " + min + "\r\nMax value = " + max);
+        System.out.println("____________________________________________________");
+        System.out.print("Enter Http Error ");
+        int error = 0;
+        boolean state = false;
+        while (true) {
+            try {
+                error = Integer.parseInt(br.readLine());
+
+                for (HTTPError s : HTTPError.values()) {
+                    if (error == s.getDescription()) {
+                        System.out.println(s + ": " + s.getDescription());
+                        state = true;
+                    }
+                }
+                if(state == false){
+                    System.out.println("Dont find error!");
+                }
+                break;
+            } catch (IOException e) {
+                System.out.println("Wrong");
+            }
+        }
 
         System.out.println("____________________________________________________");
         Dog[] dogs = new Dog[3];
