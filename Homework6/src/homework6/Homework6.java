@@ -38,7 +38,7 @@ public class Homework6 {
             System.out.println(bird.fly());
             System.out.println(bird.toString());
         }
-        System.out.println("__________________________________________________f");
+        System.out.println("__________________________________________________");
         System.out.println("Exercixe №2");
 
         Worker[] employees = new Worker[]{new PaidWorker("1231239v01v41", "Petro", 15.4, 39),
