@@ -6,28 +6,59 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args)  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		System.out.println("Write number of month ");
-		MonthDay.checkmonth(Integer.parseInt(br.readLine()));
+		try {
+			MonthDay.checkmonth(Integer.parseInt(br.readLine()));
+		} catch (NumberFormatException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		Calculation.numbers();
 
-		Position.numbers();
+		try {
+			Position.numbers();
+		} catch (NumberFormatException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		Car[] cars = new Car[3];
 		for (int i = 0; i < cars.length; i++) {
 			cars[i] = new Car();
 			System.out.println("Write type of car ");
-			cars[i].setType(br.readLine());
+			try {
+				cars[i].setType(br.readLine());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println("Write yerar of production ");
-			cars[i].setYear(Integer.parseInt(br.readLine()));
+			try {
+				cars[i].setYear(Integer.parseInt(br.readLine()));
+			} catch (NumberFormatException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println("Write engine capacity");
-			cars[i].setCapacity(Double.parseDouble(br.readLine()));
+			try {
+				cars[i].setCapacity(Double.parseDouble(br.readLine()));
+			} catch (NumberFormatException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		System.out.println("Write certain model year");
-		int year = Integer.parseInt(br.readLine());
+		int year = 0;
+		try {
+			year = Integer.parseInt(br.readLine());
+		} catch (NumberFormatException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		System.out.println("Cars from " + year + " year:");
 		for (int i = 0; i < cars.length; i++) {

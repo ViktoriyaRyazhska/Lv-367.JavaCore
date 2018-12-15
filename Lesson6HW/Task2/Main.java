@@ -6,13 +6,25 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args){
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("How many Employee we have?");
-		int empnum = Integer.parseInt(br.readLine());
+		int empnum = 0;
+		try {
+			empnum = Integer.parseInt(br.readLine());
+		} catch (NumberFormatException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Employee[] employee = new Employee[empnum];
 		System.out.println("How many Employee work by contract?");
-		int contract = Integer.parseInt(br.readLine());
+		int contract = 0;
+		try {
+			contract = Integer.parseInt(br.readLine());
+		} catch (NumberFormatException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		for (int i = 0; i < employee.length; i++) {
 			System.out.println("Please write name:");
 			if (i<contract) {
@@ -31,7 +43,12 @@ public class Main {
 				((SalariedEmployee) employee[i]).setSocialSecurityNumber(Integer.toString ((int)(Math.random() * 10000000)));;
 				
 			}
-			employee[i].setName(br.readLine());
+			try {
+				employee[i].setName(br.readLine());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			employee[i].calculatePay();
 			
 		}

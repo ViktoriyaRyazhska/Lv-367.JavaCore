@@ -6,25 +6,32 @@ import java.io.InputStreamReader;
 
 public class Task2 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args)  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Write sentence ");
-		String letter = br.readLine();
-		
-		/*letter.replaceAll("  ", " ");
-		letter.replaceAll("I am", "I`m");*/
-		System.out.println(letter);
-		String[] tab = letter.split(" ");
-		StringBuilder newLetter = new StringBuilder();
-		newLetter.append("");
-		for (int i = 0; i < tab.length; i++) {
-			newLetter.append(tab[i]).append(" ");
-			
+		String letter = null;
+		try {
+			letter = br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		System.out.println(newLetter.toString());
-		String newstrletter = newLetter.toString();
-		newstrletter.replaceAll("I am", "I'm");
-		System.out.println(newstrletter);
+		
+		letter = letter.replaceAll(" {2,}", " ");
+		letter.replaceAll("I am", "I`m");
+		
+		System.out.println(letter);
+//		String[] tab = letter.split(" ");
+//		StringBuilder newLetter = new StringBuilder();
+//		newLetter.append("");
+//		for (int i = 0; i < tab.length; i++) {
+//			newLetter.append(tab[i]).append(" ");
+//			
+//		}
+//		System.out.println(newLetter.toString());
+//		String newstrletter = newLetter.toString();
+//		newstrletter.replaceAll("I am", "I'm");
+//		System.out.println(newstrletter);
 	}
 
 }

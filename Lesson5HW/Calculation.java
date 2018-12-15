@@ -5,14 +5,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Calculation {
-	public static void numbers() throws NumberFormatException, IOException {
+	public static void numbers()  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		System.out.println("Pls write  10 int numbers ");
 		int[] numbers = new int[9];
 		boolean pos = true;
 		for(int i=0;i<numbers.length;i++) {
-			numbers[i] = Integer.parseInt(br.readLine());
+			try {
+				numbers[i] = Integer.parseInt(br.readLine());
+			} catch (NumberFormatException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			if(i<5 && numbers[i] <0) {
 				pos = false;
 			}

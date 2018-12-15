@@ -6,10 +6,16 @@ import java.io.InputStreamReader;
 
 public class Task1 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args)  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Write sentence ");
-		String letter = br.readLine();
+		String letter = null;
+		try {
+			letter = br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		String[] tab = letter.split(" ");
 		int maxlength=tab[0].length(),id = 0;

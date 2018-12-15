@@ -9,16 +9,28 @@ import java.util.List;
 
 public class Main {
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args)  {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		List students = new ArrayList<Student>();
 		System.out.println("Write how many student we have");
-		int std = Integer.parseInt(br.readLine());
+		int std = 0;
+		try {
+			std = Integer.parseInt(br.readLine());
+		} catch (NumberFormatException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	
 		for (int i = 0; i < std; i++) {
 			System.out.println("Write name and course");
-			Student stud = new Student(br.readLine(), Integer.parseInt(br.readLine()));
+			Student stud = null;
+			try {
+				stud = new Student(br.readLine(), Integer.parseInt(br.readLine()));
+			} catch (NumberFormatException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			students.add(stud);
 		}
 		Student.courseComparator compare = new Student.courseComparator();
