@@ -1,5 +1,0 @@
-number of lines = 48
-the longest line in file number: 		task1 p2 = new task1("Peace in the peace", 1000);|| contains 51  elements in line
-
- Name - Orest Horak 
- Date of Birth - 25 November 1998
