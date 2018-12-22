@@ -43,40 +43,40 @@ public class FinalTasks {
 
     public static void main(String[] args) {
         System.out.println("Task 1");
-        Task1 task1 = new Task1(br);
+//        Task1 task1 = new Task1(br);
 
         System.out.println("Task 2");
-        Task2 task2 = new Task2(br);
+//        Task2 task2 = new Task2(br);
 
         System.out.println("Task 3");
-        Task3 task3 = new Task3(br);
+//        Task3 task3 = new Task3(br);
 
         System.out.println("Task 4");
-        Task4 task4 = new Task4(br);
+//        Task4 task4 = new Task4(br);
 
         System.out.println("Task 5");
-        Task5 task5 = new Task5(br);
+//        Task5 task5 = new Task5(br);
         
         System.out.println("Task 6");
-        Task6 task6 = new Task6(br);
+//        Task6 task6 = new Task6(br);
         
         System.out.println("Task 7");        
-        Task7 task7 = new Task7(br);
+//        Task7 task7 = new Task7(br);
         
         System.out.println("Task 8");    
-        Task8 task8 = new Task8(br);
+//        Task8 task8 = new Task8(br);
         System.out.println("Task 9");    
-        Task9 task9 = new Task9(br);
+//        Task9 task9 = new Task9(br);
         System.out.println("Task 10");    
-        Task10 task10 = new Task10(br);
+//        Task10 task10 = new Task10(br);
         System.out.println("Task 11");    
-        Task11 task11 = new Task11(br);
+//        Task11 task11 = new Task11(br);
         System.out.println("Task 12");    
-        Task12 task12 = new Task12(1000);
+//        Task12 task12 = new Task12(1000);
         System.out.println("Task 13");    
-        Task13 task13 = new Task13();
+//        Task13 task13 = new Task13();
         System.out.println("Task 14");    
-        Task14 task14 = new Task14();
+        Task14 task14 = new Task14(200);
     }
 
 

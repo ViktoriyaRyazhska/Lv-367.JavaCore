@@ -7,6 +7,7 @@ package finaltasks.tasks;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -20,8 +21,44 @@ import java.util.List;
  */
 public class Task14 {
 
-    public Task14() {
-        
+    public Task14(int sum) {
+        int ways = 0;
+        for (int a = sum; a >= 0; a -= sum) {
+            for (int b = a; b >= 0; b -= Coins.Pound.getDescription()) {
+                for (int c = b; c >= 0; c -= Coins.FiftyPence.getDescription()) {
+                    for (int d = c; d >= 0; d -= Coins.TwentyPence.getDescription()) {
+                        for (int e = d; e >= 0; e -= Coins.TenPence.getDescription()) {
+                            for (int f = e; f >= 0; f -= Coins.FivePence.getDescription()) {
+                                for (int g = f; g >= 0; g -= Coins.TwoPence.getDescription()) {
+                                    ways++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        System.out.printf("£ %.2f can be generated in "+ways+" number of ways",((double)sum/100));
+
     }
 
+    enum Coins {
+        Pound(100),
+        OnePence(1),
+        TwoPence(2),
+        FivePence(5),
+        TenPence(10),
+        TwentyPence(20),
+        FiftyPence(50);
+
+        private int description;
+
+        private Coins(int description) {
+            this.description = description;
+        }
+
+        public int getDescription() {
+            return description;
+        }
+    }
 }
