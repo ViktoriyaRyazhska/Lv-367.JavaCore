@@ -46,7 +46,7 @@ public class FinalTasks {
 //        Task1 task1 = new Task1(br);
 
         System.out.println("Task 2");
-//        Task2 task2 = new Task2(br);
+        Task2 task2 = new Task2(br);
 
         System.out.println("Task 3");
 //        Task3 task3 = new Task3(br);
@@ -76,7 +76,7 @@ public class FinalTasks {
         System.out.println("Task 13");    
 //        Task13 task13 = new Task13();
         System.out.println("Task 14");    
-        Task14 task14 = new Task14(200);
+//        Task14 task14 = new Task14(200);
     }
 
 
