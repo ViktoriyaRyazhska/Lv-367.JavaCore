@@ -5,6 +5,8 @@
  */
 package com.net.spring.finalprojectweb.Models;
 
+import java.util.Random;
+
 /**
  *
  * @author Taras
@@ -20,7 +22,18 @@ public class ClientAccount {
     private double balance;
     private AccountType accountType;
     private double creaditLine;
+    private static int index = 0;
 
+    public ClientAccount(int clientID, double balance, AccountType accountType, double creaditLine) {
+        index++;
+        this.id = index;
+        this.clientID = clientID;
+        this.balance = balance;
+        this.accountType = accountType;
+        this.creaditLine = creaditLine;
+    }
+
+    
     public int getId() {
         return id;
     }

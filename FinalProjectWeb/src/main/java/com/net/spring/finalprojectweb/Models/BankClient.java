@@ -36,6 +36,9 @@ public class BankClient {
         this.birthDay = birthDay;
     }
 
+    public BankClient() {
+    }
+
     public static int getClientCreated() {
         return clientCreated;
     }

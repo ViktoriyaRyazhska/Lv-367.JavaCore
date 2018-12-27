@@ -17,9 +17,10 @@ import java.util.List;
  */
 public class Clients {
 
-    private List<BankClient> bankClients = new ArrayList<>();
+    private static List<BankClient> bankClients = new ArrayList<>();
+    private static Clients instance = new Clients();
 
-    public Clients() {
+    private Clients() {
         bankClients.add(new BankClient("Pttro", "First", "Furta", "Lviv", "zar89@i.ua", "0312312312", new Date()));
         bankClients.add(new BankClient("Roman", "Second", "Lubinska", "Lviv", "Mar69@gmail.com", "0665465765", new Date()));
         bankClients.add(new BankClient("Igor", "Fifty", "Shevchenka", "Lviv", "bar89@i.ua", "0634308999", new Date()));
@@ -33,6 +34,20 @@ public class Clients {
 
     public void setNewBankClients(BankClient bankClient) {
         this.bankClients.add(bankClient);
+    }
+
+    public BankClient getBankClient(int id) {
+        BankClient client = new BankClient();
+        for (BankClient c : bankClients) {
+            if (c.getId() == id) {
+                client = c;
+            }
+        }
+        return client;
+    }
+
+    public static Clients getInstance() {
+        return instance;
     }
 
 }

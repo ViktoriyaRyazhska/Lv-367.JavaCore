@@ -5,6 +5,7 @@
  */
 package com.net.spring.finalprojectweb.Data;
 
+import com.net.spring.finalprojectweb.Models.AccountType;
 import com.net.spring.finalprojectweb.Models.BankClient;
 import com.net.spring.finalprojectweb.Models.ClientAccount;
 import java.util.ArrayList;
@@ -16,19 +17,24 @@ import java.util.List;
  */
 public class Accounts {
 
-    List<ClientAccount> clientAccounts = new ArrayList<>();
+    private static List<ClientAccount> clientAccounts = new ArrayList<>();
+    private static Accounts instance = new Accounts();
 
-    public Accounts() {
-        clientAccounts.add(new ClientAccount());
-        clientAccounts.add(new ClientAccount());
-        clientAccounts.add(new ClientAccount());
-        clientAccounts.add(new ClientAccount());
-        clientAccounts.add(new ClientAccount());
-        clientAccounts.add(new ClientAccount());
-    }
-
-    public List<ClientAccount> getClientAccounts() {
-        return clientAccounts;
+    private Accounts() {
+        clientAccounts.add(new ClientAccount(1, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(4, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(3, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(2, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(2, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(1, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(5, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(1, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(1, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(3, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(5, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(3, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(4, 10000, AccountType.CurrentAccount, 0));
+        clientAccounts.add(new ClientAccount(2, 10000, AccountType.CurrentAccount, 0));
     }
 
     public void setClientAccounts(ClientAccount clientAccount) {
@@ -43,5 +49,13 @@ public class Accounts {
             }
         }
         return results;
+    }
+
+    public List<ClientAccount> getAllAccounts() {
+        return clientAccounts;
+    }
+
+    public static Accounts getInstance() {
+        return instance;
     }
 }
